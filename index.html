@@ -24,7 +24,12 @@
 		<!-- Main-Style -->
 		<link href="css/style.css" rel="stylesheet">	
 		
-		
+		<style>
+	      #map {
+	        width: 300px;
+	        height: 240px;
+	      }
+	    </style>
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -309,22 +314,22 @@
 				<div class="row">					
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/event1.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/event1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img2.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img2.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/event2.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/event2.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img3.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img3.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/event3.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/event3.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img4.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img4.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/event4.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/event4.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 				</div>
@@ -333,22 +338,22 @@
 				<div class="row">					
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img5.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img5.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/event5.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/event5.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img6.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img6.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/event6.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/event6.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img7.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img7.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/event7.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/event7.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img8.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img8.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/event8.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/event8.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 				</div>
@@ -605,6 +610,19 @@
 							<h3>Address</h3>
 							<ul class="unstyled">
 								<li><i class="fa fa-map-marker"></i>25th Street, Suite 2 New York NY 10887</li>
+								<li><div id="map"></div>
+								    <script>
+								      function initMap() {
+								        var mapDiv = document.getElementById('map');
+								        var map = new google.maps.Map(mapDiv, {
+								          center: {lat: 53.5250221, lng: -113.5299736},
+								          zoom: 8
+								        });
+								      }
+								    </script>
+								    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+								        async defer></script>
+        						</li>
 								<li><i class="fa fa-envelope"></i>email@domain.com</li>
 								<li><i class="fa fa-phone"></i>+40 (0) 231 1234 567</li>
 								<li><i class="fa fa-fax"></i>+40 (0) 123 1234 568</li>
